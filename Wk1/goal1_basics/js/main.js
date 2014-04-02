@@ -262,8 +262,10 @@ console.log('------ conditionals ----------');
     - conditions can be used just about anywhere, not just in conditionals and loops
 */
 
-
-
+	var myVar = 5 > 3;
+	console.log("is 5 greater than 3: ", myVar);
+	
+	
 /*
      most common comparison operators:
      > < >=  <=  !== ! ==  ===
@@ -279,7 +281,11 @@ console.log('------ conditionals ----------');
          };
 */
 
-
+	if (5 > 3){
+		//execute code here
+		console.log("'5 > 3:', True!");
+		
+	}
 
 /*
     - a common mistake is to use the assignment operator  = instead of the ==
@@ -292,8 +298,17 @@ console.log('------ conditionals ----------');
 */
 
     // == performs a loose check of two values
+	if("1" == 1){
+		console.log("'1' == 1, True");
+	}
 
-
+	if(1 == 1){
+		console.log("1 == 1, True");
+	}
+	
+	if("1" !== 1){
+		console.log("'1' === 1, False");
+	}	
 
 /* ==============================================================
     if - else statements (allows only for one option)
@@ -307,11 +322,25 @@ console.log('------ conditionals ----------');
  ================================================================
  */
 
-
+	if("a" === "b"){
+		//true: run code
+		console.log("a is less than b");
+	}else{
+		//false: run code
+		console.log("if-else: the 'IF' statement is false");
+	}
 
     //if - else if - else (allows for multiple options)
 
-
+	if("a" > "b"){
+	console.log("a is less than b");	
+	}else if("a" > "c"){
+	console.log("a is less than c");
+	}else if("a" > "d"){
+	console.log("a is less than d");
+	}else{
+	console.log("if - else if: all others returned false");
+	}
 
     //nested conditional statement
 
