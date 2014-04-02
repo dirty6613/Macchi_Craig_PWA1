@@ -1,7 +1,7 @@
 /*
-     Name:
-     Date:
-     Class & Section:  PWA1-####
+     Name: Craig Macchi
+     Date: 4/2/14
+     Class & Section:  PWA1-1404
      Comments: "Goal 1: Review of WPF"
  */
 
@@ -52,16 +52,22 @@
 console.log('------ variables ----------');
 
     //example 1: variables defined properly
+	//var name = "craig"; 
+	//var course = "PWA1";
+	//var month = "4";
+	//console.log ("name: ", name + " / course: ", course + " / month: ", month);
 
 
     //example 2: variables not defined will = "undefined"
-
+	//var name, course ="PWA1", month;
+	//console.log ("name: ", name + " / course: ", course + " / month: ", month);
 
     //example 3: a mix of variables defined and not defined
 
 
     //example 4: declaring multiple variables at once w/ same value
-
+	var a = b = c = d = 10;
+	console.log ("a: ", a  + " / b: ", b  + " / c: ", c  + " / d: ", d);
 
 
 // string (definition, concatenation, escape character)
