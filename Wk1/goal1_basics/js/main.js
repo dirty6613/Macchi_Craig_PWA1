@@ -498,6 +498,11 @@ console.log("Bob's Mood: ",results);
     4.  console.log the results
  ********************************************/
 
+	var temp = 60;
+	var student1;
+	weather = "Sunny";
+	student1 = (weather === "Sunny" ? "happy" : ((temp>= 80) ? "content" : "sad"));
+	console.log("Student1 is: ",student1);
 
 
 // Functions: (definition, whitespace, invocation, arguments, returns)
