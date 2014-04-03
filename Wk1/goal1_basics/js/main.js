@@ -395,7 +395,7 @@ console.log('------ conditionals ----------');
 	if( 5 < 2 || (1 === 1 && ! (2 == "2" || 5 < 2)) ){
 			console.log('logical operator: true');
 	}else{
-		console.log('logical operator: false');
+			console.log('logical operator: false');
 	}
 
 
@@ -410,8 +410,15 @@ console.log('------ conditionals ----------');
  GOAL
     1. learn if - else
  ********************************************/
+	var weather = "cloudy";
 
+	if(weather === "sunny"){
+		var results = "happy";
+	}else{
+		var results = "sad";
+	}
 
+console.log("Bob's Mood: ",results);	
 
 
 /*******************************************
@@ -429,7 +436,31 @@ console.log('------ conditionals ----------');
         - else bobsMood = "sad"
     3.  console.log the results after each conditional
  ********************************************/
-
+	var weather = "overcast";
+	var waves = 10;
+	if(weather === "sunny"){
+		if(waves == 10){
+		results = "pumped";
+		console.log("Bob's Mood: ",results);	
+		}else if(waves < 10 && waves > 4){
+		results = "mellow";
+		console.log("Bob's Mood: ",results);
+		}else{
+		results = "bummed";
+		console.log("Bob's Mood: ",results);
+		}
+	}else if (weather === "overcast"){
+		if(waves < 11 && waves > 6){
+		results = "jackedUp";
+		console.log("Bob's Mood: ",results);
+		}else if(waves < 7 && waves > 2){
+		results = "totally Bummed";
+		console.log("Bob's Mood: ",results);	
+		}else{
+		results = "not Happy";
+		console.log("Bob's Mood: ",results);	
+	}
+	}
 
 
 
