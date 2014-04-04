@@ -54,39 +54,133 @@
 
     //--------------------------------------------------------
     console.log("2. concat first and last name");
-
+	/*	     2.  create a function named 'fullName'
+         - accept 2 parameters into the function that are strings (firstname and lastname)
+         - return the name after it has been concatenated
+         - console.log the answer outside of the function*/
         //PUT FUNCTION HERE
-
-    console.log(fullName('James', 'Bond'));
+		
+		var firstName = "james";
+		var lastName = "bond";
+		function fullName(firstName, lastName){
+			
+			fullName = firstName + " " + lastName;
+			return fullName;
+			
+			};
+		
+		var results = fullName(firstName,lastName);
+		console.log('Full Name: ', results);
 
     //--------------------------------------------------------
     console.log("3. word count");
     var ipsum = "this is test text that is being used as input to a function"
-
+/*		     3.  create a function named 'wordCount'
+         - accept 1 parameter into the function that is a long string of text words
+         - create a function that counts all the words and return the answer
+         - console.log the answer outside of the function*/
         //PUT FUNCTION HERE
+		var longString  = 'Hello World, this is my long string';
 
-    console.log(wordCount(ipsum));
+		function wordCount(strCount){
+			var count = 0;
+			words = strCount.split(" ");
+			for(i=0; i< words.length ; i++){
+				if (words[i] != "")
+				count +=1;
+			}
+			return count; 
+		
+		};
+		var cnt = wordCount(longString);
+    console.log('Count: ',cnt);
 
     //--------------------------------------------------------
     console.log("4. sentence char count");
-
+	
+	    /* 4.  create a function named 'charCount'
+         - accept 1 parameter into the function that is a long string of text
+         - return length of the array of string characters
+         - console.log the answer outside of the function
+*/
         //PUT FUNCTION HERE
+		var res = longString.split("");
+		function charCount(strCount){
+			var count = 0;
+			
+			for(i=0; i< res.length ; i++){
+				if (words[i] != "")
+				count +=1;
+			}
+			return count; 	
+		};
 
-    console.log(charCount(ipsum));
+   	var cnt = charCount(res);
+    console.log('Count: ',cnt);
 
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
+	     /*5.  create a function named 'vowelsInWord'
+         - accept 1 parameter into the function that is a a one word string
+         - return the number of vowels in the word
+         - console.log the answer outside of the function*/
 
         //PUT FUNCTION HERE
+		var vowelWord = "Abracadabra";
+		var vowels = ["a","e","i","o","u"];
+		var res = vowelWord.toLowerCase();
+		var res = res.split("");
+		console.log(res);
+		console.log(vowels);
+		function vowelsInWord(strCount){
+			var count = 0;
+			
+			for(i=0; i< res.length ; i++){
+				for (j=0; j<vowels.length; j++){
+				if (res[i] == vowels[j])
+				count +=1;
+			}
+			}
+			return count; 	
+		};
 
-    console.log(vowelsInWord('JavaScript'));
+   	var cnt = vowelsInWord(res);
+    console.log('Count: ',cnt);
 
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
-
+	
+	    /* 6.  create a function named 'findNum'
+         - accepts 2 parameters into the function - 1. array of numbers, 2. boolean
+         - if the second parameter being passed is "false" or null then
+             - create an array with all of the odd numbers from
+                the array
+         - else - create an array with all of the even numbers
+            from the array
+         - return the array
+         - console.log the answer outside of the function
+*/
         //PUT FUNCTION HERE
-
-    console.log(findNum([31,22,4,67,83,6,5,4]));
-    console.log(findNum([31,22,4,67,83,6,5,4], false));
+		var numbers = new Array(31,22,4,67,83,6,5,4);
+		var boolean = 0;
+		function findNum(numbers){
+			
+			if (boolean == 0){
+			//if false	
+				var count = 0;
+				for(i=0; i< numbers.length ; i++){
+				if ((numbers[i]%2) == 0)
+				count +=1;
+			}
+				
+			
+			}else if (boolean === 1){
+			//if true
+			
+			}
+			return count;
+		}
+	 var cnt = findNum(res);
+    console.log('Count: ',cnt);
 
 })();
