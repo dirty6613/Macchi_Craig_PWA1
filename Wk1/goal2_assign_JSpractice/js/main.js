@@ -151,8 +151,6 @@
 		var vowels = ["a","e","i","o","u"];
 		var res = vowelWord.toLowerCase();
 		var res = res.split("");
-		console.log(res);
-		console.log(vowels);
 		function vowelsInWord(strCount){
 			var count = 0;
 			
