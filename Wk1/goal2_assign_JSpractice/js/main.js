@@ -1,4 +1,8 @@
 // self-executing function
+
+// Craig Macchi
+// 4/3/2012
+// Assignment: Javascript Practice
 (function(){
 
     /*******************************************
