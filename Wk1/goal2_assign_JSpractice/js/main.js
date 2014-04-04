@@ -165,26 +165,37 @@
          - console.log the answer outside of the function
 */
         //PUT FUNCTION HERE
-		var numbers = new Array(31,22,4,67,83,6,5,4);
+		var numbers = [31,22,4,67,83,6,5,4];
 		var boolean = 0;
-		function findNum(numbers){
+		function findNum(numValue,bValue){
+			var results = [];
 			
 			if (boolean == 0){
 			//if false	
-				var count = 0;
+				
 				for(i=0; i< numbers.length ; i++){
-				if ((numbers[i]%2) == 0)
-				count +=1;
-			}
+				if (numbers[i]%2 != 0)
+				results.push(numbers[i]);
 				
 			
-			}else if (boolean === 1){
+				}
+			
+			}else if (boolean == 1){
 			//if true
+				for(i=0; i< numbers.length ; i++){
+				if (numbers[i]%2 == 0)
+				results.push(numbers[i]);
+				
+			
+				}
 			
 			}
-			return count;
+			
+			var answer = results + boolean;
+			return answer;
+			
 		}
-	 var cnt = findNum(res);
-    console.log('Count: ',cnt);
+	 var cnt = findNum(results,boolean)
+    console.log('Array: ',cnt);
 
 })();
