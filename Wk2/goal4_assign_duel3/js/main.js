@@ -4,16 +4,22 @@
 // Date: 4/16/14
 // Assignment: WEEK 3 Assignment: The Duel - Part III
 
+console.log(" ** FIGHT ** ");
 
-// Define Variables in an Object
-fighter1 = {name:'Spiderman', damage:20, health:100};
-figther2 = {name:'Superman', damage:20, health:100};
+
+//Define doms
+var fighter1_txt = document.getElementById("kabal").getElementsByTagName("p");
+var fighter2_txt = document.getElementById("kratos").getElementsByTagName("p");
+var round_txt = document.getElementByTagName("h4");
+var button = document.getElementById("fight_btn");
 
 //Define Variables in an array
 var playerOne = ["Spiderman", 100, 50];
 var playerTwo = ["Superman", 100, 50];
 
-
+// Define Variables in an Object
+var fighter1 = [{name:'Spiderman', damage:20, health:100}];
+var figther2 = [{name:'Superman', damage:20, health:100}];
 
 
 var rd = 1;
