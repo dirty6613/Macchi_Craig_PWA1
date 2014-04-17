@@ -5,8 +5,11 @@
 // Assignment: WEEK 3 Assignment: The Duel - Part III
 
 
-// Define Variables in Array
+// Define Variables in an Object
+fighter1 = {name:'Spiderman', damage:20, health:100};
+figther2 = {name:'Superman', damage:20, health:100};
 
+//Define Variables in an array
 var playerOne = ["Spiderman", 100, 50];
 var playerTwo = ["Superman", 100, 50];
 
