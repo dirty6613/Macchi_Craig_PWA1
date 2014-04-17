@@ -24,13 +24,17 @@ var figther2 = [{name:'Superman', damage:20, health:100}];
 
 var rd = 1;
 
+
+//click event for start button
+button.addEventListener("click",fight, false);
+
 // Fight Function
 function fight(){
 	var results;
 	//start match
 	//call player info & health
 		console.log(playerOne [0] + ":" + playerOne[1] + " *START* " + playerTwo[0] +":" + playerTwo[1]);
-	alert(playerOne [0] + ":" + playerOne[1] + " *START* " + playerTwo[0] +":" + playerTwo[1]);
+	//alert(playerOne [0] + ":" + playerOne[1] + " *START* " + playerTwo[0] +":" + playerTwo[1]);
 	//loop through up to 10 rounds to play out the fight
 	for(var i = 0; i < 10; i++){
 		//random formula to generate damage
@@ -49,10 +53,10 @@ function fight(){
 		//check if either player has died
 		var results = winnerCheck();
 		if (results === "game on"){
-		alert(playerOne [0] + ": " +playerOne[1] + " *ROUND " + rd + " OVER* " + playerTwo[0] + ": " + playerTwo[1] + ".");
+		//alert(playerOne [0] + ": " +playerOne[1] + " *ROUND " + rd + " OVER* " + playerTwo[0] + ": " + playerTwo[1] + ".");
 		}else{
 		console.log(results);
-		alert(results);
+		//alert(results);
 		break;
 		}
 	rd++;
