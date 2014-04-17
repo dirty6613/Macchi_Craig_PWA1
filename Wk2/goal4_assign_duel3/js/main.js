@@ -3,13 +3,18 @@
 // Name: Craig Macchi
 // Date: 4/16/14
 // Assignment: WEEK 3 Assignment: The Duel - Part III
-
+(function(){
+	
+	window.onload = init;
+	
+	function init(){
 console.log(" ** FIGHT ** ");
 
 
 //Define doms
-var fighter1_txt = document.getElementById("kabal").getElementsByTagName("p");
-var fighter2_txt = document.getElementById("kratos").getElementsByTagName("p");
+var fighter1_txt = document.getElementById("kabal").getElementsByTagName("p")[0];
+var fighter2_txt = document.getElementById("kratos").getElementsByTagName("p")[0];
+console.log(fighter2_txt);
 var round_txt = document.getElementByTagName("h4");
 var button = document.getElementById("fight_btn");
 
@@ -18,18 +23,35 @@ var playerOne = ["Spiderman", 100, 50];
 var playerTwo = ["Superman", 100, 50];
 
 // Define Variables in an Object
-var fighter1 = [{name:'Spiderman', damage:20, health:100}];
-var figther2 = [{name:'Superman', damage:20, health:100}];
+var fighters = [
+{name:'Spiderman', damage:20, health:100},
+
+{name:'Superman', damage:20, health:100}
+];
 
 
 var rd = 1;
 
+//Add text for page
+fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
+fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
+round_txt.innerHTML = "Click to START Fight!";
 
 //click event for start button
 button.addEventListener("click",fight, false);
 
 // Fight Function
 function fight(){
+	
+	//Start match - display name/health
+	fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
+	
+	
+	console.log(fighters[0].health, fighters[1].health);
+}
+
+//old fight function
+/*function fight(){
 	var results;
 	//start match
 	//call player info & health
@@ -61,7 +83,7 @@ function fight(){
 		}
 	rd++;
 	} //end for loop
-} //end function
+} //end function*/
 // Winner Check Function
 function winnerCheck(){
 		var results = "game on";
@@ -83,6 +105,8 @@ function winnerCheck(){
 		return results;
 
 }
+}
+})();
 
 // Call Function
 fight();
