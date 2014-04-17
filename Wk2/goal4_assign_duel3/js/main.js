@@ -40,7 +40,7 @@ function fight(){
 		//check if either player has died
 		var results = winnerCheck();
 		if (results === "game on"){
-		alert("Round " + rd + " is over.");
+		alert(playerOne [0] + ": " +playerOne[1] + " *ROUND " + rd + " OVER* " + playerTwo[0] + ": " + playerTwo[1] + ".");
 		}else{
 		console.log(results);
 		alert(results);
