@@ -66,17 +66,18 @@ function fight(){
 		rd++;
 		
 		if (results === "no winner"){
-			fighter1_txt.innerHTML = fighters[0].name + ":" + fighter[0].health;
-				fighter2_txt.innerHTML = fighters[1].name + ":" + fighter[1].health;
+			fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
+				fighter2_txt.innerHTML = fighters[1].name + ":" + fighters[1].health;
 		//alert(playerOne [0] + ": " +fighters[0] + " *ROUND " + rd + " OVER* " + playerTwo[0] + ": " + fighters[1] + ".");
 		}else{
-			fighter1_txt.innerHTML = results;
-			figther2_txt.innerHTML = "";
+			fighter1_txt.innerHTML = '<span style = "margin-left:250px; width: 100%;">' + results + '</span>';
+			fighter2_txt.innerHTML = "";
 			
 			button.removeEventListener("click",fight,false);
+			//document.getElementById("fight_btn").disabled=true;
 			//button.disable = true;
 			
-			//button.onlcik = "return false;
+			//button.onclick = "return false";
 			
 			document.querySelector('.buttonblue').innerHTML = "DONE!!";
 		
