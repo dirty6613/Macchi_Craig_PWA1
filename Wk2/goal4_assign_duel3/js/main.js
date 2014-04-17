@@ -60,15 +60,53 @@ function fight(){
 		
 		//check if either player has died
 		var results = winnerCheck();
-		if (results === "game on"){
+		console.log(results);
+		
+		round_txt.innerHTML = "ROUND " + rd + " completed";
+		rd++;
+		
+		if (results === "no winner"){
+			fighter1_txt.innerHTML = fighters[0].name + ":" + fighter[0].health;
+				fighter2_txt.innerHTML = fighters[1].name + ":" + fighter[1].health;
 		//alert(playerOne [0] + ": " +fighters[0] + " *ROUND " + rd + " OVER* " + playerTwo[0] + ": " + fighters[1] + ".");
 		}else{
-		console.log(results);
+			fighter1_txt.innerHTML = results;
+			figther2_txt.innerHTML = "";
+			
+			button.removeEventListener("click",fight,false);
+			//button.disable = true;
+			
+			//button.onlcik = "return false;
+			
+			document.querySelector('.buttonblue').innerHTML = "DONE!!";
+		
+		//console.log(results);
 		//alert(results);
 		}
-	rd++;
-	console.log(fighters[0].health, fighters[1].health);
+	
+	//console.log(fighters[0].health, fighters[1].health);
 };
+
+
+function winnerCheck(){
+	
+	var results = "no winner";
+	if (fighters[0].health < 1 && fighters[1].health < 1)
+	{
+		results = "YOU BOTH DIE!!!";
+		
+	}else if (fighters[0].health < 1){
+		
+		results = fighters[1].name + "WINS!!!";
+		
+	}else if (fighters[1].health < 1){
+		
+		results = fighters[0].name + "WINS!!!";
+	}
+	return results;
+	
+	
+	}
 
 //old fight function
 /*function fight(){
@@ -104,8 +142,21 @@ function fight(){
 	rd++;
 	} //end for loop
 } //end function*/
-// Winner Check Function
-function winnerCheck(){
+
+
+
+
+// OLD Winner Check Function
+//function winnerCheck(){
+	
+	
+	
+	
+	
+	
+	//old winnerCheck
+/*	round_txt.innerHTML = "ROUND " + rd + "complete";
+	rd++;
 		var results = "game on";
 		if(fighters[0] < 1 || fighters[1] < 1){
 			//check if BOTH players have died
@@ -123,10 +174,12 @@ function winnerCheck(){
 			}
 		}
 		return results;
+*/
+//}
 
-}
+
 }
 //})();
 
 // Call Function
-fight();
+//fight();
